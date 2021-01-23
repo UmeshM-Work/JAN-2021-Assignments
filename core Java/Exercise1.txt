@@ -1,0 +1,419 @@
+
+
+Q1
+===========================================
+import java.util.Scanner;
+
+public class Q1
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner (System.in) ;
+		
+		System.out.print ("Enter to check ") ;
+		int num = scan.nextInt() ;
+		
+		boolean flag = false ;
+		
+		for ( int i = 2 ; i <= num/2 ; ++i )
+		{
+			if ( num%i == 0 )
+			{
+				flag = true ;
+				break ;
+			}
+		}
+		
+		if ( !flag )
+		{
+			System.out.print("\n");
+			System.out.print(num+ " is prime");
+		}
+		else
+		{
+			System.out.print("\n");
+			System.out.print(num+ "not prime");
+		}
+	}
+}
+
+==============================================================
+
+Q2
+
+public class Q2
+{
+	public static void main(String[] args) 
+	{
+	Scanner scan = new Scanner (System.in);
+		
+	System.out.print("Enter A Number  ");
+	intnum = scan.nextInt() ;
+		
+	if ( num > 0 )
+		{
+			
+		System.out.print(num+ " is  positive number.");
+		}
+	else if ( num < 0 )
+		{
+			
+		System.out.print(num+ " is  negative number.");
+		}
+	else
+		{
+			
+		System.out.print(num+ " is  0.");
+		}
+	}
+}
+
+===============================================================
+
+Q3
+
+
+public class Q3
+{
+	public static void main(String[] args) 
+	{
+	Scanner scan = new Scanner (System.in) ;
+	System.out.print ( "Enter A Number " ) ;
+	int num = scan.nextInt ( ) ;
+		
+	int fact = num ;
+		
+	while ( num > 1 )
+		{
+			num-- ;
+			fact = fact * num ;
+		}
+		
+	System.out.print ( "\nFactorial  is : " +fact);
+	}
+}
+
+================================================================
+
+Q4
+
+public class Q4
+{
+	public static void main(String[] args) 
+	{
+		int num , first = 0 , second = 1 , next ;
+		
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter a Number : " );
+		num = scan.nextInt ( )  ;
+		
+		System.out.println ( "Fibonacci Series : " );
+		System.out.print ( " ");
+		for ( int i = 0 ; i < num ; i ++ )
+		{
+			System.out.print (" " +first);
+			next = first + second ;
+			first = second ;
+			second = next ;
+		}
+ 	}
+}
+
+=====================================================================
+Q7
+
+
+public class Q7 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Before Swap" );
+		
+		System.out.print ( "Enter First Number : " );
+		int num1 = scan.nextInt ( ) ;
+		
+		System.out.print ( "Enter Second Number : " );
+		int num2 = scan.nextInt ( ) ;
+		
+		int temp ;
+		
+		temp = num1 ;
+		num1 = num2 ;
+		num2 = temp ;
+		
+		System.out.print ( "After Swap") ;
+		
+		
+		System.out.print ( "Value Of First Number : " +num1 );
+		
+		System.out.print ( "Value Of Second Number : " +num2 );
+	}
+}
+
+===========================================================
+Q8
+public class Q8
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Before Swap" );
+		
+		System.out.print ( "Enter First Number : " );
+		int a= scan.nextInt() ;
+		
+		System.out.print ( "Enter Second Number : " );
+		int b= scan.nextInt() ;
+		
+		a= a* b;
+		b= a/ b;
+		b= a/ b;
+		
+        		System.out.print ( "After Swap") ;
+		
+		System.out.print ( "Value Of First Number : " +a);
+		
+		System.out.print ( "Value Of Second Number : " +b);
+	}
+}
+
+
+===========================================================
+Q10
+
+public class Q10
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter First Number : " );
+		int a = scan.nextInt() ;
+		
+		System.out.print ( "\nEnter Second Number : " );
+		int b = scan.nextInt() ;
+		
+		System.out.print ( "\nEnter Third Number : " );
+		int c = scan.nextInt() ;
+		
+		if  ( a > b && a > c )
+		{
+			System.out.print (" ");
+			System.out.print (a+ " is largest number.");
+		}
+		else if ( a > b && a > c )
+		{
+			System.out.print (" ");
+			System.out.print (b+ " is largest number.");
+		}
+		else
+		{
+			System.out.print (" ");
+			System.out.print (c+ " is largest number.");
+		}
+		
+	}
+}
+
+=============================================================
+
+Q11
+
+public class Q11
+{
+	public static void main(String[] args) 
+	{
+		int num , rev= 0 ;
+		
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter a Number : " );
+		num = scan.nextInt() ;
+		
+		while ( num != 0 )
+		{
+			rev = rev * 10  +  num % 10 ;
+			num = num / 10 ;
+		}
+		
+		System.out.print ( "Reversed Number is : " +rev);
+	}
+}
+
+===================================================================
+
+Q12
+
+public class Q12_PalindromeNumber 
+{
+	public static void main(String[] args) 
+	{
+        int num , rev = 0 , nombre;
+		
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter A Number : " );
+		num = scan.nextInt() ;
+		
+		nombre= num ;
+		
+		while ( num != 0 )
+		{
+			rev = rev * 10  +  num % 10 ;
+			num = num / 10 ;
+		}
+		
+		if ( nombre== rev )
+		{
+			System.out.print (" It is palindrome" );
+		}
+		else
+		{
+			System.out.print ( "it is not palindrome" );
+		}
+	}
+}
+
+=============================================================
+Q20
+
+
+public class Q20
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter A Number : " );
+		n= scan.nextInt() ;
+		System.out.print (Integer.toOctalString(n));
+		
+		
+	}
+}
+
+================================================================
+Q21
+
+public class Q21
+{
+	public static void main(String[] args) 
+	{	
+		//System.out.print(Integer.parseInt(octalString, 8));
+		
+		System.out.print (Integer.parseInt("22", 8));
+	}
+}
+
+
+================================================================
+
+Q22
+public class Q22 
+{
+	public static void main(String[] args) 
+	{
+		System.out.print (Integer.parseInt("2000",2));
+		
+	}
+}
+
+==================================================================
+Q23
+
+
+public class Q23
+{
+	public static void main(String[] args) 
+	{
+		System.out.print(Integer.toBinaryString(20));
+		
+		
+	}
+}
+
+====================================================================
+
+Q25
+
+public class Q25
+{
+	public static void main(String[] args) 
+	{
+		
+		System.out.print(Integer.toOctalString(30));   
+	}
+}
+
+====================================================================
+
+Q30
+
+package exercise_1;
+
+import java.util.Scanner ;
+
+public class Q30
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner ( System.in ) ;
+		
+		System.out.print ( "Enter Size Of Array");
+		int num = scan.nextInt();
+		
+		int arr[] = new int [ num ] ;
+		
+		System.out.print ("Enter Elements Of An Array :");
+		
+		for ( int i = 0 ; i < arr.length ; i++ )
+		{
+			arr[i] = scan.nextInt();
+		}
+		
+		int max = arr[0] ;
+		
+		for ( int i = 0 ; i < arr.length ; i++ )
+		{
+			if ( arr[i] > max )
+			{
+				max = arr[i];
+			}
+		}
+		
+		System.out.print ("Largest Element In An Array is : " +max);
+		
+	}
+}
+
+
+======================================================================
+
+Q28
+
+
+public class Q28 
+{
+	public static void main(String[] args) 
+	{
+		String str = "CDAC Mumbai" ;
+		
+		String rev = reverse(str) ;
+		
+		System.out.print ("Reversed Sentence is : " +rev);
+	}
+	
+	public static String reverse(String str) 
+	{
+	    if (str.isEmpty())
+	      return str;
+
+	    return reverse(str.substring(1)) + str.charAt(0);
+	  }
+}
+
+
